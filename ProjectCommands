@@ -1,0 +1,19 @@
+GoPhish Install:
+wget https://github.com/gophish/gophish/releases/latest/download/gophish-linux-64bit.zip
+sudo apt update && sudo apt install unzip -y
+unzip gophish-linux-64.zip -d gophish
+cd gophish
+chmod +x gophish
+sudo ./gophish
+
+From here, the gophish command will give you a temporary password and a URL (127.0.0.1:3333) to access the Gophish admin tab from
+The admin tab is where we can build out our campaign (landing pages, email templates, mail accounts, etc.)
+
+MailHog Install:
+wget https://github.com/mailhog/MailHog/releases/latest/download/v1.0.1/MailHog_linux_amd64
+chmod +x MailHog_linux_amd64
+sudo mv MailHog_linux_amd64 /usr/local/bin/mailhog
+mailhog
+
+Mailhog will run indefintely from the command line while you want the service open
+When running the command, it will give you a URL (0.0.0.0:8025) and password to access MailHog from.
