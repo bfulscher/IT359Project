@@ -1,4 +1,12 @@
 <?php
+
+/*
+  This PHP script handles login form submissions by connecting to a local MySQL database (login_db).
+  It checks if the submitted username and password match an entry in the 'users' table.
+  If valid credentials are found, it displays a welcome message; otherwise, it shows an error.
+  Note: This is for educational/demo purposes and lacks proper security measures (e.g., input sanitization).
+*/
+
 $mysqli = new mysqli("localhost", "root", "toor", "login_db");
 
 if($mysqli->connect_error) {
