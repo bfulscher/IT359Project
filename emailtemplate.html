@@ -15,9 +15,12 @@
   <h2>Security Alert: Account is Suspended</h2>
   <p>Dear User,</p>
   <p>Your account is hacked and needed to be fixed immediately!!!!</p>
+   <!-- Fake login link that leads to the phishing landing page -->
   <p><a href="http://10.10.10.9/login.html">Click here to log in and change your password</a></p>
   <p>If you do not fix it, you will be suspended!</p>
+  <!-- Tracking pixel to detect when the email is opened -->
   <img src="{{.TrackingURL}}" width="1" height="1" style="display:none;" />
+   <!-- Second tracking tag (older versions of GoPhish may use this)-->
   {{.Tracker}}
 </body>
 </html>
